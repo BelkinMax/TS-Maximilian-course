@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "ts": "tsc app.ts -w"
+    "ts": "tsc app.ts",
+    "ts:w": "tsc app.ts -w"
   },
   "repository": {
     "type": "git",

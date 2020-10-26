@@ -1,1 +1,1 @@
-console.log('live updates done')
+console.log('hello world')
