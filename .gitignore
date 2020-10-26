@@ -3,6 +3,9 @@
 .idea
 .vscode
 
+# Build
+.js
+
 # Node
 node_modules
 

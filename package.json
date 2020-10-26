@@ -1,0 +1,19 @@
+{
+  "name": "ts-maximilian-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "ts": "tsc app.ts -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelkinMax/TS-Maximilian-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BelkinMax/TS-Maximilian-course/issues"
+  },
+  "homepage": "https://github.com/BelkinMax/TS-Maximilian-course#readme"
+}
