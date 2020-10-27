@@ -9,7 +9,15 @@ function combine(input1: number | string, input2: number | string) {
   return result;
 }
 
+// should be removed in compiled js
+
 const combineAges = combine( 30, 26 );
 const combineNames = combine( 'Max', 'Anna' );
 
 console.log(combineAges, combineNames)
+
+const test = () => {
+  console.log("arrow function");
+}
+
+test()

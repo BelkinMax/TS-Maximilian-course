@@ -3,9 +3,6 @@
 .idea
 .vscode
 
-# Build
-app.js
-
 # Node
 node_modules
 
