@@ -6,6 +6,7 @@ function add(n1: number, n2: number, showRes: boolean, phrase: string) {
   } else {
     return n1 + n2;
   }
+  return;
 }
 
 let num1: number = 5;
