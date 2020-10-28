@@ -1,23 +1,31 @@
-function combine(input1: number | string, input2: number | string) {
+const add = (a: number, b: number = 5) => a + b;
+console.log(add(5))
 
-  let result: number | string;
-  if (typeof input1 === 'number' && typeof input2 === 'number') {
-    result = input1 + input2;
-  } else {
-    result = input1.toString() + input2.toString();
-  }
-  return result;
+const person = {
+  name: 'Max',
+  age: 25
 }
 
-// should be removed in compiled js
-
-const combineAges = combine( 30, 26 );
-const combineNames = combine( 'Max', 'Anna' );
-
-console.log(combineAges, combineNames)
-
-const test = () => {
-  console.log("arrow function");
+const copiedPerson = {
+  ...person
 }
 
-test()
+console.log(person);
+console.log(copiedPerson);
+console.log(person === copiedPerson);
+
+const addMore = (...numbers: number[]) => {
+  return numbers.reduce((curRes, curVal) => {
+    return curRes + curVal;
+  }, 0)
+};
+console.log(addMore(5, 5, 4, 2, 1))
+
+// array distructuring
+
+const hobbies: string[] = ['cooking', 'hiking', 'coding', 'running'];
+
+const [h1, h2, ...rest] = hobbies;
+
+console.log(hobbies, h1, h2, rest);
+
