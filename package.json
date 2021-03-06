@@ -1,20 +1,19 @@
 {
-  "name": "ts-maximilian-course",
+  "name": "understanding-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Understanding TypeScript Course Setup",
   "main": "app.js",
   "scripts": {
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BelkinMax/TS-Maximilian-course.git"
-  },
-  "author": "",
+  "keywords": [
+    "typescript",
+    "course"
+  ],
+  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BelkinMax/TS-Maximilian-course/issues"
-  },
-  "homepage": "https://github.com/BelkinMax/TS-Maximilian-course#readme"
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
 }
