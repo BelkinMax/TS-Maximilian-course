@@ -15,6 +15,7 @@ console.log('Add:', add(1, 2));
 
 interface Named {
 	readonly name: string;
+	outputName?: string;
 }
 
 interface Greetable extends Named {
