@@ -1,44 +1,44 @@
-// type AddFn = (a: number, b: number) => number;
-interface NumbersFn {
-	(a: number, b: number): number;
-}
-
-const add: NumbersFn = (a, b) => {
-	return a + b;
-};
-
-const sub: NumbersFn = (a, b) => {
-	return a - b;
-};
-
-console.log('Add:', add(1, 2));
-
-interface Named {
-	readonly name: string;
-	outputName?: string;
-}
-
-interface Greetable extends Named {
-	greet(phrase: string): void;
-}
-
-class Person implements Greetable {
+interface Admin {
 	name: string;
-	age = 30;
+	jobs: string[];
+}
 
-	constructor(n: string) {
-		this.name = n;
+interface Employee {
+	name: string;
+	startDate: Date;
+}
+
+interface ProEmployeeInt extends Employee, Admin {}
+
+type ProEmployee = Admin & Employee;
+
+const e1: ProEmployee = {
+	name: 'Max',
+	jobs: ['Do something'],
+	startDate: new Date(),
+};
+
+console.log(e1);
+
+type Combo = string | number;
+type Numeric = number | boolean;
+
+type Universal = Combo & Numeric;
+
+const test: Universal = 12;
+
+type Unknown = Employee | Admin;
+
+function printInfo(emp: Unknown) {
+	console.log('Name:', emp.name);
+
+	if ('jobs' in emp) {
+		console.log(emp.jobs);
 	}
 
-	greet(phrase: string) {
-		console.log(phrase + ' ' + this.name);
+	if ('startDate' in emp) {
+		console.log(emp.startDate);
 	}
 }
 
-let user1: Greetable;
-
-user1 = new Person('Max');
-// user1.name = 'Manu';
-
-user1.greet('Hi there - I am');
-console.log(user1);
+printInfo(e1);
